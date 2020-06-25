@@ -5,6 +5,7 @@
 *.code-workspace
 .changelog
 
+package-lock.json
 node_modules
 dist
 
