@@ -12,6 +12,7 @@
     "url": "git+https://github.com/taylorallen0913/blogarithm.git"
   },
   "devDependencies": {
+    "@types/node": "^14.0.14",
     "typescript": "^3.9.5"
   }
 }

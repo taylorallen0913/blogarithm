@@ -2,18 +2,17 @@
   "name": "blogarithm",
   "private": true,
   "version": "0.0.1",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "tsc && lerna run build"
+    "setup": "yarn && yarn build",
+    "build": "lerna run build",
+    "clean": "yarn clean:dist && yarn clean:modules",
+    "clean:dist": "rm -rf packages/*/dist",
+    "clean:modules": "rm -rf node_modules && rm -rf packages/*/node_modules"
   },
   "license": "MIT",
-  "dependencies": {
-    "@blogarithm/core": "0.0.1"
-  },
   "devDependencies": {
     "lerna": "^3.22.1",
     "typescript": "^3.9.5"

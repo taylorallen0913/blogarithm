@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "declaration": true,
+
     "sourceMap": true,
     "removeComments": true,
 
@@ -13,8 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-
-    "outDir": "dist"
+    "noFallthroughCasesInSwitch": true
   }
 }
