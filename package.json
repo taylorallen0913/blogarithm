@@ -1,0 +1,21 @@
+{
+  "name": "blogarithm",
+  "private": true,
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc && lerna run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@blogarithm/core": "0.0.1"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "typescript": "^3.9.5"
+  }
+}
