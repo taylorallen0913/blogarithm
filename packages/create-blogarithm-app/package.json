@@ -4,8 +4,15 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
+  "bin": {
+    "create-blogarithm-app": "dist/index.js"
+  },
   "scripts": {
-    "build": "tsc"
+    "setup": "yarn && yarn build",
+    "build": "yarn clean:dist && tsc",
+    "clean": "yarn clean:dist && yarn clean:modules",
+    "clean:dist": "rm -rf packages/*/dist",
+    "clean:modules": "rm -rf node_modules && rm -rf packages/*/node_modules"
   },
   "repository": {
     "type": "git",
@@ -14,8 +21,7 @@
   "dependencies": {
     "figlet": "^1.4.0",
     "fs-extra": "^9.0.1",
-    "inquirer": "^7.2.0",
-    "@blogarithm/core": "0.0.1"
+    "inquirer": "^7.2.0"
   },
   "devDependencies": {
     "@types/figlet": "^1.2.0",
