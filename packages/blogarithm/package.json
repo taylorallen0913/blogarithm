@@ -5,11 +5,19 @@
   "typings": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "setup": "yarn && yarn build",
+    "build": "yarn clean:dist && tsc",
+    "clean": "yarn clean:dist && yarn clean:modules",
+    "clean:dist": "rm -rf dist",
+    "clean:modules": "rm -rf node_modules",
+    "start": "blogarithm-scripts start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taylorallen0913/blogarithm.git"
+  },
+  "dependencies": {
+    "blogarithm-scripts": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",

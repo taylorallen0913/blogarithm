@@ -8,6 +8,7 @@
   "scripts": {
     "setup": "yarn && yarn build",
     "build": "lerna run build",
+    "build:clean": "lerna run clean && lerna run build",
     "clean": "yarn clean:dist && yarn clean:modules",
     "clean:dist": "rm -rf packages/*/dist",
     "clean:modules": "rm -rf node_modules && rm -rf packages/*/node_modules"
