@@ -1,3 +1,19 @@
 #!/usr/bin/env node
 
-import './cli';
+import args from 'args';
+import fs from 'fs';
+import { displayHeader } from './utils/header';
+
+const createProject = (args: Array<string>): void => {
+  if (args[args.indexOf('init') + 1] !== undefined) {
+    displayHeader();
+    const projectName = args[args.indexOf('init') + 1];
+    console.log(projectName);
+  }
+};
+
+args.command('init', 'Initializes new project', () =>
+  createProject(process.argv),
+);
+
+const flags = args.parse(process.argv);
