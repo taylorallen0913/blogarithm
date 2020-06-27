@@ -8,6 +8,7 @@ const createProject = (args: Array<string>): void => {
   if (args[args.indexOf('init') + 1] !== undefined) {
     displayHeader();
     const projectName = args[args.indexOf('init') + 1];
+    fs.mkdirSync(projectName);
     console.log(projectName);
   }
 };
