@@ -1,0 +1,9 @@
+dist
+node_modules
+build
+coverage
+packages/blogarithm/lib/
+packages/blogarithm-scripts/lib/
+packages/create-blogarithm-app/lib/
+
+__fixtures__
